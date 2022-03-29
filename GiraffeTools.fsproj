@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <OutputType>dll</OutputType>
+    <OutputType>Library</OutputType>
+    <Version>0.1.0-beta-1</Version>
+    <FileVersion>0.1.0</FileVersion>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+    <Authors>Uwe Riegel</Authors>
+    <Company>Uwe Riegel</Company>
+    <Copyright>Uwe Riegel</Copyright>
+    <Description>Extension library for giraffe-fsharp</Description>
+    <Summary>Extension library for giraffe-fsharp</Summary>
+    <IsPackable>true</IsPackable>
+    <PackageReleaseNotes>Created</PackageReleaseNotes>
+    <PackageLicenseUrl>
+    </PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/uriegel/GiraffeTools</PackageProjectUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <RepositoryURL>https://github.com/uriegel/GiraffeTools</RepositoryURL>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>FSharp;F#;.NET;Functional;Giraffe</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Sse.fs" />
+    <Compile Include="Json.fs" />
+    <Compile Include="Library.fs" />
+    <None Include=".\README.md" Pack="true" PackagePath="\" />    
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Giraffe" Version="6.0.0-alpha-2" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>
+      </PackagePath>
+    </None>
+  </ItemGroup>
+</Project>
